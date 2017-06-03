@@ -21,5 +21,19 @@ It's useful when you need to change the base localization language and you don't
 
 
 
-## more coming soon...
+## convert_strings_to_nslocalizedstrings.py
 
+Cycle thru .m files (only Objective C, no Swift sorry) and find all strings not yet "NSLocalized" and ask for each strings what to do.
+Finally you have modified .m files and a .strings file with your key/string paits
+
+**Suggested steps:**
+
+* Make a backup (also if the script create a backup or each file)
+* Change paths in this script and run it
+* decide one by one which strings to convert
+* Replace your .m files and check it in xcode
+
+**todo**
+
+* avoid duplicate key in .strings file
+* implement black list to avoid to elaborate not localisable strings (NSLog, NSLocalizeString, etc etc)
